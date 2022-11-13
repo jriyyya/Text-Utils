@@ -4,6 +4,8 @@ export default function TextFrom(props) {
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Converted to Upper case","success")
+
   };
   const handleOnChange = (event) => {
     setText(event.target.value);
@@ -12,10 +14,14 @@ export default function TextFrom(props) {
   const handleLowerClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to Lower case","success")
+
   };
 
   const handleClearClick = () => {
     setText("");
+    props.showAlert("Cleared Text","danger")
+
   };
 
   const handleSpeak = () => {
@@ -58,6 +64,7 @@ export default function TextFrom(props) {
   const handleExtraSpaces = () => {
     let newText = text.replace(/\s+/g, " ");
     setText(newText);
+    props.showAlert("Removed Extra Spaces","success")
   };
 
   const [fWord, findWord] = useState("");
