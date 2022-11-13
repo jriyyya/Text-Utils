@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Navbar(props) {
-    console.log(props.mode)
   return (
     <div>
       <nav className={`navbar navbar-${props.mode} navbar-expand-lg bg-${props.mode}`}>
@@ -29,10 +28,10 @@ export default function Navbar(props) {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/About">
                   About
                 </a>
-              </li>
+                </li>
                   </ul>
                <button className="btn btn-warning" onClick={props.toggleMode}>Switch Theme</button>
 

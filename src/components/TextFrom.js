@@ -81,7 +81,7 @@ export default function TextFrom(props) {
             onChange={handleOnChange}
             value={text}
             id="myBox"
-            rows="10"
+            rows="8"
             style={{ backgroundColor: props.mode === "dark" ? "grey" : "white" }}
           ></textarea>
         </div>
