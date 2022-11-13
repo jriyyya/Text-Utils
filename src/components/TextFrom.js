@@ -58,6 +58,11 @@ export default function TextFrom(props) {
         element.click();
     }
 
+    const handleExtraSpaces = () => {
+        let newText = text.replace(/\s+/g,' ')
+        setText(newText)
+    }
+
     const [fWord,findWord] = useState('');
     const [rWord,replaceWord] = useState('');
     const [text , setText] = useState('');
@@ -71,6 +76,7 @@ export default function TextFrom(props) {
         <button className='btn btn-primary mx-1' onClick={handleUpClick}>Convert to UpperCase</button>
         <button className='btn btn-primary mx-1' onClick={handleLowerClick}>Convert to LowerCase</button>
         <button className='btn btn-primary mx-1' onClick={handleDownloadText}>Download Text</button>
+        <button className='btn btn-primary mx-1' onClick={handleExtraSpaces}>Remove extra space</button>
         <button className='btn btn-primary mx-1 'id="toggle" onClick={handleSpeak}>Speak</button>
         <button className='btn btn-danger mx-1' onClick={handleClearClick}>Clear Text</button>
       
